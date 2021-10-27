@@ -34,3 +34,18 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Cryptoburgers
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USERNAME}}
+          
+          scripts: |
+            mkdir crypto-burgers
+            cd crypto-burgers
+            git clone git@github.com:trust0212/cryptoburgers.git
+            echo 'Deployment successful to digital ocean'
