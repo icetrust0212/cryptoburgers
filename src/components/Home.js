@@ -5,18 +5,24 @@ function Home() {
         <Container>
             <Header>
                 <Play></Play>
-                <WhitePaper></WhitePaper>
+                <Link href="https://whitepaper.cryptoburgers.io" target="_blank"><WhitePaper></WhitePaper></Link>
             </Header>
             <ImageBox>
+              <Link href="https://discord.gg/qxqbJzRTZX" target="_blank"> 
                 <Discord>
                     <img src="/ASSETS/discordia.png" />
                 </Discord>
+              </Link>
+              <Link href="https://twitter.com/CryptoBurgerNFT" target="_blank"> 
                 <Twitter>
                 <img src="/ASSETS/gorjeo.png" />
                 </Twitter>
+              </Link>
+              <Link href="https://t.me/cryptoburgersnft" target="_blank"> 
                 <Telegram>
                 <img src="/ASSETS/telegrama.png" />
                 </Telegram>
+              </Link>
             </ImageBox>
         </Container>
     )
@@ -154,5 +160,9 @@ img{
         cursor: pointer;
     }
 }
+`
+
+const Link = styled.a`
+  text-decoration: none;
 `
 export default Home
