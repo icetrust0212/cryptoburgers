@@ -45,7 +45,7 @@ jobs:
           username: ${{secrets.SSH_USERNAME}}
           
           scripts: |
-            mkdir crypto-burgers
-            cd crypto-burgers
+            mkdir /var/www/html/crypto-burgers
+            cd /var/www/html/crypto-burgers
             git clone git@github.com:trust0212/cryptoburgers.git
             echo 'Deployment successful to digital ocean'
