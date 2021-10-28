@@ -4,7 +4,9 @@ function Home() {
     return (
         <Container>
             <Header>
+                <Link href="#">
                 <Play></Play>
+                </Link>
                 <Link href="https://whitepaper.cryptoburgers.io" target="_blank"><WhitePaper></WhitePaper></Link>
             </Header>
             <ImageBox>
