@@ -45,7 +45,6 @@ jobs:
           username: ${{secrets.SSH_USERNAME}}
           
           script: |
-            mkdir /var/www/html/
             cd /var/www/html/
             cd cryptoburgers
             git pull
