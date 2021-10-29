@@ -5,7 +5,7 @@ function Home() {
         <Container>
             <Header>
                 <Link href="#">
-                <Play></Play>
+                  <Play></Play>
                 </Link>
                 <Link href="https://whitepaper.cryptoburgers.io" target="_blank"><WhitePaper></WhitePaper></Link>
             </Header>
@@ -32,87 +32,59 @@ function Home() {
 
 const Container = styled.div`
 width: 100%;
-height: 100vh;
+min-height: 100vh;
+height: fit-content;
 background-image: url("/BACKGROUND/use.png");
 background-size: cover;
-background-position-x: 50%;
-background-position-y: center;
-background-size: cover;
-background-repeat-x: initial;
-background-repeat-y: initial;
-background-attachment: initial;
-background-origin: initial;
-background-clip: initial;
-background-color: initial;
-background-size: cover;
-background-position: 50%
-
+background-position: center;
+@media(max-width: 767px) {
+  background-image: url("/BACKGROUND/use-mobile.png");
+}
 `
 
 const Header= styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  
-  
+  justify-content: space-around;
+  padding-top: 20px;  
 `
-const Play = styled.div`
+const Play = styled.img`
 width: 180px;
 height: 70px;
 border-radius: 15px;
-margin: 20px 200px;
   background-image: url("/ASSETS/BOTON PLAY 1.png");
   background-size: cover;
-  background-position-x: 50%;
-  background-position-y: center;
   background-size: cover;
-  background-repeat-x: initial;
-  background-repeat-y: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
-  background-size: cover;
-  background-position: 50%;
+  background-position: center;
 
   &:hover{
     background-image: url("/ASSETS/BOTON PLAY 2.png");
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 600px) {
-    margin: 10px 20px;
+  @media only screen and (max-width: 767px) {
+    width: 140px;
+    height: 65px;
   }
 `
 
-const  WhitePaper = styled.div`
+const  WhitePaper = styled.img`
 width: 180px;
 height: 70px;
 border-radius: 15px;
-margin: 20px 200px;
   background-image: url("/ASSETS/BOTON WP 1.png");
   background-size: cover;
-  background-position-x: 50%;
-  background-position-y: center;
-  background-size: cover;
-  background-repeat-x: initial;
-  background-repeat-y: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
-  background-size: cover;
-  background-position: 50%;
+  background-position: center;
 
   &:hover{
     background-image: url("/ASSETS/BOTON WP 2.png");
     cursor: pointer;
   }
   
-  @media only screen and (max-width: 600px) {
-    margin: 10px 20px;
+  @media only screen and (max-width: 767px) {
+    width: 140px;
+    height: 65px;
   }
 `
 
@@ -135,6 +107,9 @@ const Discord = styled.div`
           cursor: pointer;
       }
   }
+  @media only screen and (max-width: 767px) {
+    width: 50px;
+  }
 `
 
 const Twitter = styled.div`
@@ -147,6 +122,9 @@ img{
         transform: scale(1.1);
         cursor: pointer;
     }
+}
+@media only screen and (max-width: 767px) {
+  width: 50px;
 }
 `
 
@@ -161,6 +139,9 @@ img{
         transform: scale(1.1);
         cursor: pointer;
     }
+}
+@media only screen and (max-width: 767px) {
+  width: 50px;
 }
 `
 
