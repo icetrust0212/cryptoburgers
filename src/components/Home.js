@@ -39,6 +39,7 @@ background-size: cover;
 background-position: center;
 @media(max-width: 767px) {
   background-image: url("/BACKGROUND/use-mobile.png");
+  background-size: contain;
 }
 `
 
