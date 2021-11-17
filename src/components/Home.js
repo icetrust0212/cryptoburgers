@@ -65,7 +65,7 @@ const GameButtonLayout= styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 40px;
+  padding-top: 10px;
   width: 100%;
   margin-bottom: auto;
   @media(max-width: 767px) {
@@ -76,7 +76,7 @@ const GameButtonLayout= styled.div`
   }
 `
 const GameButton = styled.img`
-  height: 100px;
+  height: 120px;
   cursor: pointer;
   display: block;
   &:hover{
@@ -84,7 +84,7 @@ const GameButton = styled.img`
   }
 
   @media only screen and (max-width: 767px) {
-    height: 65px;
+    height: 85px;
   }
 `
 
