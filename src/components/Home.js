@@ -3,27 +3,29 @@ import styled from 'styled-components'
 function Home() {
     return (
         <Container>
-            <Header>
+            <GameButtonLayout>
                 <Link href="#">
-                  <Play></Play>
+                  <GameButton src="/ASSETS/btn_play.png"  />
                 </Link>
-                <Link href="https://whitepaper.cryptoburgers.io" target="_blank"><WhitePaper></WhitePaper></Link>
-            </Header>
+                <Link href="https://whitepaper.cryptoburgers.io" target="_blank">
+                  <GameButton src="/ASSETS/btn_whitepaper.png"/>
+                </Link>
+            </GameButtonLayout>
             <ImageBox>
               <Link href="https://discord.gg/qxqbJzRTZX" target="_blank"> 
-                <Discord>
+                <SocialButton>
                     <img src="/ASSETS/discordia.png" />
-                </Discord>
+                </SocialButton>
               </Link>
               <Link href="https://twitter.com/CryptoBurgerNFT" target="_blank"> 
-                <Twitter>
+                <SocialButton>
                 <img src="/ASSETS/gorjeo.png" />
-                </Twitter>
+                </SocialButton>
               </Link>
               <Link href="https://t.me/cryptoburgersnft" target="_blank"> 
-                <Telegram>
+                <SocialButton>
                 <img src="/ASSETS/telegrama.png" />
-                </Telegram>
+                </SocialButton>
               </Link>
             </ImageBox>
         </Container>
@@ -35,69 +37,49 @@ width: 100%;
 min-height: 100vh;
 height: fit-content;
 background-image: url("/BACKGROUND/use.png");
-background-size: cover;
+background-size: 100% 100%;
 background-position: center;
+align-items: center;
+justify-content: center;
+display: flex;
 @media(max-width: 767px) {
   background-image: url("/BACKGROUND/use-mobile.png");
   background-size: contain;
 }
 `
 
-const Header= styled.div`
-  width: 100%;
+const GameButtonLayout= styled.div`
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 20px;  
+  flex-direction: column;
+  padding-top: 40px;  
+  @media(max-width: 767px) {
+    padding-top: 80px;
+  }
 `
-const Play = styled.img`
-width: 180px;
-height: 70px;
-border-radius: 15px;
-  background-image: url("/ASSETS/BOTON PLAY 1.png");
-  background-size: cover;
-  background-size: cover;
-  background-position: center;
+const GameButton = styled.img`
+  height: 8vw;
+  cursor: pointer;
 
   &:hover{
-    background-image: url("/ASSETS/BOTON PLAY 2.png");
-    cursor: pointer;
+    padding: 3px;
   }
 
   @media only screen and (max-width: 767px) {
-    width: 140px;
-    height: 65px;
-  }
-`
-
-const  WhitePaper = styled.img`
-width: 180px;
-height: 70px;
-border-radius: 15px;
-  background-image: url("/ASSETS/BOTON WP 1.png");
-  background-size: cover;
-  background-position: center;
-
-  &:hover{
-    background-image: url("/ASSETS/BOTON WP 2.png");
-    cursor: pointer;
-  }
-  
-  @media only screen and (max-width: 767px) {
-    width: 140px;
     height: 65px;
   }
 `
 
 const ImageBox = styled.div`
-  width: 200px;
+  width: fit-content;
   position: absolute;
   bottom: 10%;
   left: 2%;
-
 `
 
-const Discord = styled.div`
+const SocialButton = styled.div`
   width: 80px;
   margin-top: 10px;
   img{
@@ -111,39 +93,6 @@ const Discord = styled.div`
   @media only screen and (max-width: 767px) {
     width: 50px;
   }
-`
-
-const Twitter = styled.div`
-width: 80px;
-margin-top: 10px;
-img{
-    width: 100%;
-
-    &:hover{
-        transform: scale(1.1);
-        cursor: pointer;
-    }
-}
-@media only screen and (max-width: 767px) {
-  width: 50px;
-}
-`
-
-const Telegram = styled.div`
-width: 80px;
-margin-top: 10px;
-
-img{
-    width: 100%;
-
-    &:hover{
-        transform: scale(1.1);
-        cursor: pointer;
-    }
-}
-@media only screen and (max-width: 767px) {
-  width: 50px;
-}
 `
 
 const Link = styled.a`
